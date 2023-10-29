@@ -1,0 +1,30 @@
+@startuml
+    class Cinema {
+        name
+        location
+    }
+
+    class Movie {
+        title
+        genre
+        duration
+    }
+
+    class Display {
+        date
+        time
+        capacity
+        DisplayName
+    }
+
+    class Program {
+  
+        programName
+        description
+    }
+
+    Cinema "1" -right- "0..*" Program : hosts
+    Program "0..*" -right- "1" Movie : includes
+    Program "1" -right- "1" Display : schedules
+    
+@enduml
