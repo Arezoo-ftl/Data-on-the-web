@@ -1,0 +1,100 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "url": "cinema.csv",
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "ID",
+                "titles": {
+                    "en": "ID"
+                },
+                "dc:description": "A unique identifier for each Cinema.",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "Name",
+                "titles": {
+                    "en": "Name"
+                },
+                "dc:description": "The name of the cinema.",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "Location",
+                "titles": {
+                    "en": "Location"
+                },
+                "dc:description": "The physical location of the cinema.",
+                "datatype": "string",
+                "required": true
+            },
+            {
+                "name": "ProgramName",
+                "titles": {
+                    "en": "Program Name"
+                },
+                "dc:description": "The name of the program being shown at the cinema.",
+                "datatype": "string"
+            },
+           
+            {
+                "name": "Date",
+                "titles": {
+                    "en": "Date"
+                },
+                "dc:description": "The date when the program is scheduled to be shown.",
+                "datatype": "date"
+            },
+            {
+                "name": "Time",
+                "titles": {
+                    "en": "Time"
+                },
+                "dc:description": "The time when the program is scheduled to start.",
+                "datatype": "time"
+            },
+            {
+                "name": "Capacity",
+                "titles": {
+                    "en": "Capacity"
+                },
+                "dc:description": "The maximum number of attendees available for the program.",
+                "datatype": "integer"
+            },
+            {
+                "name": "Title",
+                "titles": {
+                    "en": "Title"
+                },
+                "dc:description": "The title of the movie within the program.",
+                "datatype": "string"
+            },
+            {
+                "name": "Duration",
+                "titles": {
+                    "en": "Duration"
+                },
+                "dc:description": "The duration of the movie within the program.",
+                "datatype": "string"
+            },
+            {
+                "name": "Genre",
+                "titles": {
+                    "en": "Genre"
+                },
+                "dc:description": "The genre of presentation.",
+                "datatype": "string"
+            },
+            {
+                "name": "DisplayName",
+                "titles": {
+                    "en": "Display Name"
+                },
+                "dc:description": "A catchy and promotional name for the program .",
+                "datatype": "string"
+            }
+        ]
+    }
+}
