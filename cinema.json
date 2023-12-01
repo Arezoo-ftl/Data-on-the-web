@@ -1,0 +1,49 @@
+[
+    {
+            "name": "Cineplex",
+            "location" : "Am, Nibelungenpl. 5a, 94032 Passau",
+            "program":[
+             {   
+            "Program_Name" : "Superhero Showcase",
+
+            "Display" : {
+                "Display Name": "Superhero Extravaganza",
+                "Date": "2023-12-01",
+                "Time": "18:00",
+                "Capacity": 200
+            },
+            "Movie":{
+                "Title": "The Avengers",
+                "Duration": "01:30",
+                "Genre": "Action"
+            }
+        } 
+                      ]
+                },
+
+    {
+    
+        "name": "CinemaxX Munich",
+        "Location": "Isartorpl. 8, 80331 München",
+        "program": [
+          {
+            "Program_Name": "Sci-Fi Spectacular",
+            "Date": "2023-09-30",
+            "Time": "18:30:00",
+            
+            "Display": {
+              "Display_Name": "Interstellar Odyssey",
+              "Date": "2023-09-30",
+              "Time": "18:30:00",
+              "Capacity": 250
+            },
+            "Movie": {
+              "Title": "The Matrix",
+              "Duration": "02:00",
+              "Genre": "Fiction"
+            }
+          }
+        ]
+      }
+    
+    ]

@@ -1,0 +1,71 @@
+{"$schema": "https://json-schema.org/draft/2020-12/schema",
+"$id": "https://my-public-url/airport.schema.json",
+"title": "cinema",
+"description": "One cinemas from the database of Germany's cinemas.", 
+"title": "cinema",
+"description": "Two cinemas from the database of Germany's cinemas.", 
+"type": "array",
+  "items": {
+    "type": "object",
+      
+    "properties": {
+        "name": {
+         "type": "string"
+         },
+           
+          "loaction" : {
+            "type" : "string"
+          },
+              
+         "program": {
+          "type": "array",
+            "items": {
+             "type": "object",
+              "properties": {
+                "Program_Name": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "Display": {
+            "type": "object",
+            "properties": {
+              "Display Name": {
+                "type": "string"
+              },
+              "Date": {
+                "type": "string",
+                "format": "date"
+              },
+              "Time": {
+                "type": "string",
+                "format": "time"
+              },
+              "Capacity": {
+                "type": "integer"
+              }
+            }
+          },
+            "Movie": {
+              "type": "object",
+              "properties": {
+                "Title": {
+                  "type": "string"
+                },
+                "Duration": {
+                  "type": "string",
+                  "format": "duration"
+                },
+                "Genre": {
+                  "type": "string"
+                }
+              }
+
+    }
+  },
+    "required": ["name"]
+
+  }
+
+}
