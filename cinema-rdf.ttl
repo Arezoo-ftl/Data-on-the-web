@@ -1,0 +1,113 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix exv: <https://de.opendata.example/vocabulary/cinema/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+
+exv:Cinema a rdfs:Class ;
+  rdfs:label "cinema"@en ;
+  rdfs:subClassOf schema:MovieTheater;
+  rdfs:comment "A cinema typically for showing recent movies."@en .
+
+exv:Program a rdfs:Class ;
+  rdfs:subClassOf schema:ScreeningEvent;
+  rdfs:label "cinema program"@en ;
+  rdfs:comment "All recent programs that will be shown in the cinema."@en .
+
+exv:Display rdfs:Class ;
+  rdfs:label "display"@en ;
+  rdfs:comment "A display, typically used in cinemas, showing information such as date, capacity, and movie names. It provides visual information to the audience about ongoing and upcoming screenings."@en.
+
+exv:Movie rdfs:Class ;
+  rdfs:label "Movie"@en ;
+  rdfs:subClassOf schema:Movie
+  rdfs:comment "It shows the information regarding the movie, genre and duration of that."@en .
+
+exv:name a rdf:Property ;
+  rdfs:label "name"@en ;
+  rdfs:domain exv:Cinema ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The name of the cinema."@en .
+
+exv:location a rdf:Property ;
+  rdfs:label "loaction"@en ;
+  rdfs:subPropertyOf schema:location;
+  rdfs:domain exv:Cinema ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The address of the cinema."@en .
+
+exv:programname a rdf:Property ;
+  rdfs:label "program name"@en ;
+  rdfs:domain exv:program ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The name of the program."@en .
+
+exv:description a rdf:Property ;
+  rdfs:label "description"@en ;
+  rdfs:subPropertyOf schema:description;
+  rdfs:domain exv:Program ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The description of the program."@en .
+
+exv:date a rdf:Property ;
+  rdfs:label "date"@en ;
+  rdfs:domain exv:Display ;
+  rdfs:range xsd:date ;
+  rdfs:comment "The date of the display."@en .
+
+exv:time a rdf:Property ;
+  rdfs:label "time"@en ;
+  rdfs:domain exv:display ;
+  rdfs:range xsd:dateTime ;
+  rdfs:comment "The time of the display."@en .
+
+exv:capacity a rdf:Property ;
+  rdfs:label "capacity"@en ;
+  rdfs:domain exv:display ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "The capacity of the display."@en .
+
+exv:displayname a rdf:Property ;
+  rdfs:label "display name"@en ;
+  rdfs:domain exv:display ;
+  rdfs:range xsd: ;
+  rdfs:comment "The name of the display."@en .
+
+exv:title a rdf:Property ;
+  rdfs:label "title"@en ;
+  rdfs:domain exv:Movie ;
+  rdfs:range xsd:string;
+  rdfs:comment "The title of the movie."@en .
+
+exv:genre a rdf:Property ;
+  rdfs:label "genre"@en ;
+  rdfs:domain exv:Movie ;
+  rdfs:range xsd:string;
+  rdfs:comment "The genre of the movie."@en .
+
+exv:duration a rdf:Property ;
+  rdfs:label "genre"@en ;
+  rdfs:subPropertyOf schema:duration;
+  rdfs:domain exv:Movie ;
+  rdfs:range xsd:duration;
+  rdfs:comment "The duration of the movie."@en .
+
+exv:hosts a rdf:Property ;
+  rdfs:label "hosts"@en ;
+  rdfs:domain exv:cinema ;
+  rdfs:range exv:progarm ;
+  rdfs:comment "The cinema is hosting the program."@en .
+
+exv:includes a rdf:Property ;
+  rdfs:label "includes"@en ;
+  rdfs:domain exv:program ;
+  rdfs:range exv:movie ;
+  rdfs:comment "The program is containing the movies."@en .
+
+exv:schedules a rdf:Property ;
+  rdfs:label "schedules"@en ;
+  rdfs:domain exv:program ;
+  rdfs:range exv:display ;
+  rdfs:comment "For each program displays are scheduled."@en .
+
+

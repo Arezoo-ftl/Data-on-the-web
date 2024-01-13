@@ -1,7 +1,24 @@
 {
-    "@context": "http://www.w3.org/ns/csvw",
+    
+    "@id": "https://cu.opendata.cz/course-data-on-the-web/resource/cinema",
+    "@context": [
+        "https://raw.githubusercontent.com/CLARIAH/COW/master/csvw.json",
+        {
+            "@language": "en",
+            "@base": "https://cu.opendata.cz/course-data-on-the-web/resource/cinema"
+        },{
+            "dc": "http://purl.org/dc/terms/",
+            "flv": "https://de.opendata.example/vocabulary/cinema/"
+        }
+    ],
+    "dialect": {
+        "delimiter": ",",
+        "encoding": "UTF-8",
+        "quoteChar": "\""
+    },
     "url": "cinema.csv",
     "tableSchema": {
+        "aboutUrl":"{ID}",
         "columns": [
             {
                 "name": "ID",
